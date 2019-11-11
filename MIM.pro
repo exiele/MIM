@@ -16,14 +16,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cadastro.cpp \
     main.cpp \
-    janelalogin.cpp
+    janelalogin.cpp \
+    pesquisa_pessoal.cpp \
+    principal.cpp
 
 HEADERS += \
-    janelalogin.h
+    cadastro.h \
+    janelalogin.h \
+    pesquisa_pessoal.h \
+    principal.h
 
 FORMS += \
-    janelalogin.ui
+    cadastro.ui \
+    janelalogin.ui \
+    pesquisa_pessoal.ui \
+    principal.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

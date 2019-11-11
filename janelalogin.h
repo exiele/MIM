@@ -6,6 +6,9 @@
 #include <QSqlDatabase>
 #include <QDebug>
 #include <QFileInfo>
+#include <principal.h>
+#include <cadastro.h>
+#include <QCryptographicHash>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class janelaLogin; }
@@ -18,6 +21,12 @@ class janelaLogin : public QMainWindow
 public:
     janelaLogin(QWidget *parent = nullptr);
     ~janelaLogin();
+
+private slots:
+
+    void on_botao_conectar_clicked();
+
+    void on_botao_cadastrar_clicked();
 
 private:
     Ui::janelaLogin *ui;
