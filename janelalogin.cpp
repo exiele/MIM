@@ -70,8 +70,4 @@ void janelaLogin::on_botao_conectar_clicked()
     ui->passwd->clear();
 }
 
-void janelaLogin::on_botao_cadastrar_clicked()
-{
-    cadastro f_cadastro;
-    f_cadastro.exec();
-}
+

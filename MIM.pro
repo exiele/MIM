@@ -19,20 +19,23 @@ SOURCES += \
     cadastro.cpp \
     main.cpp \
     janelalogin.cpp \
-    pesquisa_pessoal.cpp \
-    principal.cpp
+    permissoes.cpp \
+    principal.cpp \
+    tabela_edit.cpp
 
 HEADERS += \
     cadastro.h \
     janelalogin.h \
-    pesquisa_pessoal.h \
-    principal.h
+    permissoes.h \
+    principal.h \
+    tabela_edit.h
 
 FORMS += \
     cadastro.ui \
     janelalogin.ui \
-    pesquisa_pessoal.ui \
-    principal.ui
+    permissoes.ui \
+    principal.ui \
+    tabela_edit.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
