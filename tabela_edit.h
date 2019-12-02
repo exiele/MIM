@@ -14,6 +14,7 @@ class tabela_edit : public QDialog
 public:
     explicit tabela_edit(QWidget *parent = nullptr);
     ~tabela_edit();
+    void set_Nome_Tabela(QString);
 
 private:
     Ui::tabela_edit *ui;

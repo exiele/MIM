@@ -43,7 +43,7 @@ void janelaLogin::on_botao_conectar_clicked()
     }
 
     QSqlQuery querry;
-    if(querry.exec("SELECT * FROM \"MIM\".pessoal WHERE usuario='"+usuario+"' and senha='"+senhaHash+"'")){
+    if(querry.exec("SELECT * FROM pessoal WHERE login_usuario='"+usuario+"' and senha='"+senhaHash+"'")){
         int count = 0;
         while (querry.next()) {
             count++;

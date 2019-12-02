@@ -17,3 +17,9 @@ void principal::on_botao_sair_clicked()
 {
     this->close();
 }
+
+void principal::on_cadPessoal_clicked()
+{
+    cadastro cadastro;
+    cadastro.exec();
+}
