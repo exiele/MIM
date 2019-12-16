@@ -16,7 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    cadastro.cpp \
+    cadastro_paciente.cpp \
+    cadastro_pessoal.cpp \
     main.cpp \
     janelalogin.cpp \
     permissoes.cpp \
@@ -24,14 +25,16 @@ SOURCES += \
     tabela_edit.cpp
 
 HEADERS += \
-    cadastro.h \
+    cadastro_paciente.h \
+    cadastro_pessoal.h \
     janelalogin.h \
     permissoes.h \
     principal.h \
     tabela_edit.h
 
 FORMS += \
-    cadastro.ui \
+    cadastro_paciente.ui \
+    cadastro_pessoal.ui \
     janelalogin.ui \
     permissoes.ui \
     principal.ui \

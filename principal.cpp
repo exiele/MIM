@@ -20,6 +20,12 @@ void principal::on_botao_sair_clicked()
 
 void principal::on_cadPessoal_clicked()
 {
-    cadastro cadastro;
+    cadastro_pessoal cadastro;
+    cadastro.exec();
+}
+
+void principal::on_cadPaciente_clicked()
+{
+    cadastro_paciente cadastro;
     cadastro.exec();
 }

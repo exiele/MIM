@@ -7,7 +7,7 @@
 #include <QDebug>
 #include <QFileInfo>
 #include <principal.h>
-#include <cadastro.h>
+#include <cadastro_pessoal.h>
 #include <QCryptographicHash>
 
 QT_BEGIN_NAMESPACE
@@ -25,8 +25,6 @@ public:
 private slots:
 
     void on_botao_conectar_clicked();
-
-    void on_botao_cadastrar_clicked();
 
 private:
     Ui::janelaLogin *ui;

@@ -11,10 +11,10 @@ janelaLogin::janelaLogin(QWidget *parent)
     ui->setupUi(this);
 
 
-    db.setHostName("localhost");
+    db.setHostName("10.65.216.46");
     db.setDatabaseName("postgres");
-    db.setUserName("postgres");
-    db.setPassword("crisroot");
+    db.setUserName("Daniel");
+    db.setPassword("crisdaniel");
     if(db.open()){
         qDebug()<<"banco de dados aberto";
     }

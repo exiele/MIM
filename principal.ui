@@ -16,6 +16,13 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -26,6 +33,13 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QPushButton" name="reqMaterial">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Requisição de Material</string>
          </property>
@@ -33,6 +47,13 @@
        </item>
        <item row="0" column="1">
         <widget class="QPushButton" name="libMaterial">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Liberação de Material</string>
          </property>
@@ -40,6 +61,13 @@
        </item>
        <item row="1" column="0">
         <widget class="QPushButton" name="entMaterial">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Entrada de Material</string>
          </property>
@@ -47,6 +75,13 @@
        </item>
        <item row="1" column="1">
         <widget class="QPushButton" name="entNotaFiscal">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Entrada com Nota Fiscal</string>
          </property>
@@ -54,6 +89,13 @@
        </item>
        <item row="2" column="0">
         <widget class="QPushButton" name="estMaterial">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Estoque de Material</string>
          </property>
@@ -61,6 +103,13 @@
        </item>
        <item row="2" column="1">
         <widget class="QPushButton" name="ajuEstoque">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Ajuste de Estoque</string>
          </property>
@@ -68,6 +117,13 @@
        </item>
        <item row="3" column="0">
         <widget class="QPushButton" name="cadPaciente">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Cadastro de Paciente</string>
          </property>
@@ -75,6 +131,13 @@
        </item>
        <item row="3" column="1">
         <widget class="QPushButton" name="conPrescricao">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Controle de Prescrição</string>
          </property>
@@ -82,6 +145,13 @@
        </item>
        <item row="4" column="0">
         <widget class="QPushButton" name="atePrescricao">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Atendimento de Prescrição</string>
          </property>
@@ -89,6 +159,13 @@
        </item>
        <item row="4" column="1">
         <widget class="QPushButton" name="cadPessoal">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Cadastro de Pessoal</string>
          </property>
@@ -282,6 +359,13 @@
    </item>
    <item>
     <widget class="QPushButton" name="botao_sair">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>sair</string>
      </property>
