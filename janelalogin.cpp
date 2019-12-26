@@ -11,7 +11,7 @@ janelaLogin::janelaLogin(QWidget *parent)
     ui->setupUi(this);
 
 
-    db.setHostName("10.65.216.46");
+    db.setHostName("localhost");
     db.setDatabaseName("postgres");
     db.setUserName("Daniel");
     db.setPassword("crisdaniel");

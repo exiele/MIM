@@ -22,7 +22,8 @@ SOURCES += \
     janelalogin.cpp \
     permissoes.cpp \
     principal.cpp \
-    tabela_edit.cpp
+    tabela_edit.cpp \
+    validarcpf.cpp
 
 HEADERS += \
     cadastro_paciente.h \
@@ -30,7 +31,8 @@ HEADERS += \
     janelalogin.h \
     permissoes.h \
     principal.h \
-    tabela_edit.h
+    tabela_edit.h \
+    validarcpf.h
 
 FORMS += \
     cadastro_paciente.ui \

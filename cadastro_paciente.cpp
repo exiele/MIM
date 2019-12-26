@@ -110,7 +110,7 @@ void cadastro_paciente::on_pushButton_clicked()
     }
     //nome notnull
     if(ui->nomeLineEdit->text()==""){
-        QMessageBox::information(this,"","É preciso digitar um nome");
+        QMessageBox::information(this,"","<font size=16>É preciso digitar um nome");
         return;
     }
     //verifica se cpf já existe
@@ -121,7 +121,7 @@ void cadastro_paciente::on_pushButton_clicked()
                 count++;
             }
             if(count>0){
-                QMessageBox::information(this,"","CPF já está cadastrado");
+                QMessageBox::information(this,"","<font size=16>CPF já está cadastrado");
                 ui->cpfLineEdit->setFocus();
                 return;
             }
@@ -135,7 +135,7 @@ void cadastro_paciente::on_pushButton_clicked()
             count++;
         }
         if(count>0){
-            QMessageBox::information(this,"","nome já está cadastrado");
+            QMessageBox::information(this,"","<font size=16>nome já está cadastrado");
             ui->nomeLineEdit->setFocus();
             return;
         }
@@ -147,7 +147,7 @@ void cadastro_paciente::on_pushButton_clicked()
                   "VALUES ('"+prontuario+"', '"+nome+"', '"+sexo+"', '"+data+"', '"+possuiCPF+"', '"+cpf+"', '"+possuiResponsavel+"', '"+responsavel+"', '"+logradouro+"', '"+numero+"', '"+complemento+"', '"+bairro+"', '"+cep+"', '"+uf+"', '"+cod_cidade+"', '"+telefone1+"', '"+telefone2+"')");
 
     if(query.exec()){
-        QMessageBox::information(this,"","cadastro realizado com sucesso");
+        QMessageBox::information(this,"","<font size=16>cadastro realizado com sucesso");
     }
     else{
         qDebug()<<query.lastError().text();

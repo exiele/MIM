@@ -43,6 +43,7 @@ void cadastro_pessoal::on_pushButton_2_clicked()
     QString setor = "NULL";
     QString cargo = "NULL";
     QString cod_cidade = "NULL";
+    QString prescricao = "NULL";
 
 
     QString usuario = ui->lineUsuario->text();
@@ -51,7 +52,19 @@ void cadastro_pessoal::on_pushButton_2_clicked()
     QByteArray hash = QCryptographicHash::hash(senha.toLocal8Bit(),QCryptographicHash::Md5);
     QString senhaHash = hash.toHex();
     grupo = ui->grupoComboBox->currentText();
-    situacao = ui->lineSituacao->text();
+    if(ui->situacaoCheckBox->isChecked()){
+        situacao = "1";
+    }
+    else{
+        situacao = "0";
+    }
+    if(ui->prescricaoCheckBox->isChecked()){
+        prescricao = "1";
+    }
+    else{
+        prescricao = "0";
+    }
+
     nome = ui->lineNome->text();
     cpf = ui->lineCPF->text();
     matricula = ui->lineMatricula->text();
@@ -71,19 +84,19 @@ void cadastro_pessoal::on_pushButton_2_clicked()
     QDateTime dt = QDateTime::currentDateTime();
     QString data = dt.toString(time_format);
     if(!(senha == confirm)){
-        QMessageBox::information(this,"","senhas digitadas não são iguais");
+        QMessageBox::information(this,"","<font size=16>senhas digitadas não são iguais");
         return;
     }
 
 
     //login notnull
     if(ui->lineUsuario->text()==""){
-        QMessageBox::information(this,"","É preciso digitar um usuario");
+        QMessageBox::information(this,"","<font size=16>É preciso digitar um usuario");
         return;
     }
     //senha notnull
     if(ui->lineSenha->text()==""){
-        QMessageBox::information(this,"","É preciso digitar uma senha");
+        QMessageBox::information(this,"","<font size=16>É preciso digitar uma senha");
         return;
     }
     //Verifica se usuario já existe
@@ -93,7 +106,7 @@ void cadastro_pessoal::on_pushButton_2_clicked()
             count++;
         }
         if(count>0){
-            QMessageBox::information(this,"","Usuário já existe");
+            QMessageBox::information(this,"","<font size=16>Usuário já existe");
             ui->lineUsuario->setFocus();
             return;
         }
@@ -105,7 +118,7 @@ void cadastro_pessoal::on_pushButton_2_clicked()
             count++;
         }
         if(count>0){
-            QMessageBox::information(this,"","Nome já está cadastrado");
+            QMessageBox::information(this,"","<font size=16>Nome já está cadastrado");
             ui->lineUsuario->setFocus();
             return;
         }
@@ -117,7 +130,7 @@ void cadastro_pessoal::on_pushButton_2_clicked()
             count++;
         }
         if(count>0){
-            QMessageBox::information(this,"","CPF já está cadastrado");
+            QMessageBox::information(this,"","<font size=16>CPF já está cadastrado");
             ui->lineUsuario->setFocus();
             return;
         }
@@ -131,10 +144,10 @@ void cadastro_pessoal::on_pushButton_2_clicked()
         }
     }
 
-    query.prepare("INSERT INTO pessoal(login_usuario, grupo, senha, situacao, data_hora_pessoal, nome_pessoal, cpf_pessoal, matricula_pessoal, conselho, logradouro, numero, complemento, bairro, cep, sigla_uf, cod_cidade, email, telefone, celular, cod_setor, cargo) "
-                  "VALUES ('"+usuario+"','"+grupo+"', '"+senhaHash+"','"+situacao+"','"+data+"','"+nome+"','"+cpf+"','"+matricula+"','"+conselho+"','"+logradouro+"','"+numero+"','"+complemento+"','"+bairro+"','"+cep+"','"+uf+"','"+cod_cidade+"','"+email+"','"+telefone+"','"+celular+"','"+setor+"','"+cargo+"')");
+    query.prepare("INSERT INTO pessoal(login_usuario, grupo, senha, situacao, data_hora_pessoal, nome_pessoal, cpf_pessoal, matricula_pessoal, conselho, logradouro, numero, complemento, bairro, cep, sigla_uf, cod_cidade, email, telefone, celular, cod_setor, cargo, conta_prescricao) "
+                  "VALUES ('"+usuario+"','"+grupo+"', '"+senhaHash+"','"+situacao+"','"+data+"','"+nome+"','"+cpf+"','"+matricula+"','"+conselho+"','"+logradouro+"','"+numero+"','"+complemento+"','"+bairro+"','"+cep+"','"+uf+"','"+cod_cidade+"','"+email+"','"+telefone+"','"+celular+"','"+setor+"','"+cargo+"','"+prescricao+"')");
     if(query.exec()){
-        QMessageBox::information(this,"","cadastro realizado com sucesso");
+        QMessageBox::information(this,"","<font size=16>cadastro realizado com sucesso");
         ui->lineUsuario->clear();
         ui->lineSenha->clear();
         ui->lineConfirmar->clear();

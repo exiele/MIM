@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1073</width>
-    <height>490</height>
+    <height>696</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>696</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -399,6 +405,13 @@
          <width>16777215</width>
          <height>50</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="currentText">
         <string/>
@@ -865,6 +878,25 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_26">
        <item>
+        <widget class="QCheckBox" name="prescricaoCheckBox">
+         <property name="minimumSize">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_21">
          <property name="maximumSize">
           <size>
@@ -880,30 +912,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Conta Prescrição</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="linePrescricao">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="inputMask">
-          <string>B</string>
-         </property>
-         <property name="text">
-          <string/>
+          <string>Prescrição</string>
          </property>
         </widget>
        </item>
@@ -911,6 +920,25 @@
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QCheckBox" name="situacaoCheckBox">
+         <property name="minimumSize">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QLabel" name="label_5">
          <property name="maximumSize">
@@ -928,29 +956,6 @@
          </property>
          <property name="text">
           <string>Situação</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineSituacao">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="inputMask">
-          <string>B</string>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -1116,7 +1121,7 @@
     </layout>
    </item>
    <item row="8" column="0" colspan="2">
-    <layout class="QHBoxLayout" name="horizontalLayout_27">
+    <layout class="QHBoxLayout" name="horizontalLayout_23">
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="maximumSize">
@@ -1158,6 +1163,22 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="QTextBrowser" name="log">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
