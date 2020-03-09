@@ -43,19 +43,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="grupo_box">
-         <property name="minimumSize">
-          <size>
-           <width>200</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-        </widget>
+        <widget class="QLineEdit" name="lineEdit"/>
        </item>
        <item>
         <widget class="QLabel" name="label_2">
@@ -71,6 +59,30 @@
        </item>
        <item>
         <widget class="QCheckBox" name="checkBox">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sim</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Log Sistema:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_3">
          <property name="font">
           <font>
            <pointsize>16</pointsize>
@@ -155,7 +167,7 @@
               <x>0</x>
               <y>0</y>
               <width>537</width>
-              <height>651</height>
+              <height>653</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -173,42 +185,42 @@
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <item>
-                    <widget class="QCheckBox" name="checkBox_3">
+                    <widget class="QCheckBox" name="consultaNotaFiscalCB">
                      <property name="text">
                       <string>C</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="checkBox_5">
+                    <widget class="QCheckBox" name="insereNotaFiscalCB">
                      <property name="text">
                       <string>I</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="checkBox_6">
+                    <widget class="QCheckBox" name="editaNotaFiscalCB">
                      <property name="text">
                       <string>E</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="checkBox_7">
+                    <widget class="QCheckBox" name="visualizaNotaFiscalCB">
                      <property name="text">
                       <string>V</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="checkBox_8">
+                    <widget class="QCheckBox" name="excluiNotaFiscalCB">
                      <property name="text">
                       <string>X</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="checkBox_9">
+                    <widget class="QCheckBox" name="relatorioNotaFiscalCB">
                      <property name="text">
                       <string>R</string>
                      </property>
@@ -1653,6 +1665,9 @@
                    <property name="text">
                     <string>I</string>
                    </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
                   </widget>
                  </item>
                  <item>
@@ -2321,7 +2336,7 @@
                <item>
                 <widget class="QLabel" name="label_44">
                  <property name="text">
-                  <string>Bibliografia</string>
+                  <string>Bibliografia:</string>
                  </property>
                 </widget>
                </item>

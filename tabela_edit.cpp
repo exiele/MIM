@@ -3,10 +3,12 @@
 
 
 tabela_edit::tabela_edit(QWidget *parent ,QString nome_tabela) :
-    QDialog(parent),
+    QDialog(parent//, Qt::WindowMaximizeButtonHint | Qt::WindowMinMaxButtonsHint | Qt::WindowCloseButtonHint), #Adicionar essas flags está crashando o programa
+            ),
     ui(new Ui::tabela_edit)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowMaximized);
     nome = nome_tabela;
     criarCabecalhos();
     preencherTabela();
@@ -92,4 +94,36 @@ void tabela_edit::on_paginaanterior_clicked()
         preencherTabela();
     }
 
+}
+
+void tabela_edit::on_excluir_clicked()
+{
+    QMessageBox::StandardButton resposta;
+    resposta = QMessageBox::question(this, "Test", "Tem certeza que deseja excluir o registro selecionado?", QMessageBox::Yes | QMessageBox::No);
+    if (resposta == QMessageBox::Yes) {
+        qDebug() << "clicou sim";
+        int linha = ui->tableWidget->currentRow();
+        QString id = ui->tableWidget->item(linha,0)->text();
+        query.prepare("DELETE FROM "+ nome + " WHERE " + chave + "='" + id +"'");
+        if(query.exec()){
+            ui->tableWidget->removeRow(linha);
+            QMessageBox::information(this,"","Registro excluído");
+
+        }
+        else{
+            QMessageBox::warning(this,"ERRO","Erro ao excluir registro");
+        }
+
+      } else {
+        qDebug() << "clicou não";
+      }
+
+}
+
+void tabela_edit::on_inserir_clicked()
+{
+    if(nome=="permissoes"){
+        permissoes permissoes(nullptr,"inserir");
+        permissoes.exec();
+    }
 }

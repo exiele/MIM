@@ -5,6 +5,7 @@
 #include <QtSql>
 #include <QMessageBox>
 #include <QDebug>
+#include <permissoes.h>
 
 namespace Ui {
 class tabela_edit;
@@ -27,6 +28,10 @@ private slots:
     void on_proximapagina_clicked();
 
     void on_paginaanterior_clicked();
+
+    void on_excluir_clicked();
+
+    void on_inserir_clicked();
 
 private:
     Ui::tabela_edit *ui;
